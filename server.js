@@ -11,20 +11,6 @@ app.use(express.static(__dirname+"/"));
 app.use(bodyparser.json());
 app.get('/contactlist',function (req,res) {
    console.log('recd req');
-    // person = {
-    //     name:'abc',
-    //     email:'aa@aa.com',
-    //     number:'123343'
-    // };
-    //
-    // person2 = {
-    //     name:'dsdsdf',
-    //     email:'fgffdg@aa.com',
-    //     number:'12334343'
-    // };
-    //
-    // var list= [person,person2];
-    // res.json(list);
 
     db.contactlist.find(function (err,docs) {
         console.log("in find");
